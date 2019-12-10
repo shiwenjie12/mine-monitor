@@ -1,0 +1,27 @@
+server:
+    port: 8008
+
+logging:
+    level: info
+
+spring:
+    application:
+        name: mine-monitor
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://mysql:3306/eapp?characterEncoding=utf8&useSSL=false
+        username: staging
+        password: e2$bNGB@qhcL2%PF
+        druid:
+            initialSize: 10
+            minIdle: 10
+            maxActive: 80
+            maxWait: 30000
+            timeBetweenEvictionRunsMillis: 60000
+            minEvictableIdleTimeMillis: 30000
+            validationQuery: SELECT 1 FROM DUAL
+            testWhileIdle: true
+            testOnBorrow: false
+            testOnReturn: false
+            poolPreparedStatements: true
+            maxPoolPreparedStatementPerConnectionSize: 20
